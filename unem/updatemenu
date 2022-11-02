@@ -7,10 +7,10 @@ rm -rf setting
 rm -rf updatemenu
 rm -rf addvmess
 
-wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/menu"
-wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/setting"
-wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/updatemenu"
-wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/addvmess"
+wget -O menu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/menu"
+wget -O setting "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/setting"
+wget -O updatemenu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/updatemenu"
+wget -O addvmess "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/addvmess"
 
 chmod +x menu
 chmod +x setting
