@@ -18,7 +18,7 @@ echo -e "$yy 97$y. CEK SEMUA SERVICE VPN$wh"
 echo -e "$yy 98$y. Settings (Pengaturan)$wh"
 echo -e "$yy 99$y. Exit (Keluar)$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 99 ] : " menu
+read -p "Select From Options : " menu
 case $menu in
 1)
 clear
