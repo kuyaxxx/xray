@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mod By SL
+# Mod By NCR
 # =====================================================
 
 # Color
@@ -344,7 +344,7 @@ END
 # / / Installation Xray Service
 cat > /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray Service Mod By SL
+Description=Xray Service Mod By NCR
 Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
@@ -461,7 +461,7 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service Mod By SL
+Description=Trojan-Go Service Mod By NCR
 Documentation=nekopoi.care
 After=network.target nss-lookup.target
 
