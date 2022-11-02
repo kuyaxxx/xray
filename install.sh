@@ -1,7 +1,14 @@
 #!/bin/bash
 # Mod By NCR
-# =====================================================
-
+if [ "${EUID}" -ne 0 ]; then
+		echo "You need to run this script as root"
+		exit 1
+fi
+if [ "$(systemd-detect-virt)" == "openvz" ]; then
+		echo "OpenVZ is not supported"
+		exit 1
+fi
+# ==========================================
 # Color
 RED='\033[0;31m'
 NC='\033[0m'
@@ -11,10 +18,17 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
-
+# ==========================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-domain=$(cat /etc/xray/domain)
+
+rm -f setup.sh
+clear
+if [ -f "/etc/xray/domain" ]; then
+echo "Script Already Installed"
+exit 0
+fi
+
 apt install iptables iptables-persistent -y
 apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
 apt install socat cron bash-completion ntpdate -y
@@ -498,3 +512,22 @@ systemctl restart trojan-go
 
 cd
 cp /root/domain /etc/xray
+
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl daemon-reload
+echo "============================================================================" | tee -a log-install.txt
+echo "" | tee -a log-install.txt
+echo "----------------------------------------------------------------------------" | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - XRAYS Vmess TLS         : 443"  | tee -a log-install.txt
+echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
+echo "   - XRAYS Vless TLS         : 443"  | tee -a log-install.txt
+echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
+echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.t
+echo " Reboot 15 Sec"
+sleep 15
+rm -f setup.sh
+reboot
