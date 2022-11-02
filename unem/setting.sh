@@ -13,11 +13,12 @@ echo -e "$yy 2$y.  Change Port Of Some Service"
 echo -e "$yy 3$y.  Autobackup Data VPS"
 echo -e "$yy 4$y.  Backup Data VPS"
 echo -e "$yy 5$y.  Restore Data VPS"
-echo -e "$yy 6$y.  Limit Bandwith Speed Server"
-echo -e "$yy 7$y.  Check Usage of VPS Ram"
-echo -e "$yy 8$y.  Reboot VPS"
-echo -e "$yy 9$y.  Speedtest VPS"
-echo -e "$yy 10$y. Displaying System Information"
+echo -e "$yy 6$y.  Update Menu"
+echo -e "$yy 7$y.  Limit Bandwith Speed Server"
+echo -e "$yy 8$y.  Check Usage of VPS Ram"
+echo -e "$yy 9$y.  Reboot VPS"
+echo -e "$yy 10$y.  Speedtest VPS"
+echo -e "$yy 11$y. Displaying System Information"
 echo -e "$yy *$y.  Menu"
 echo -e "$yy 99$y. Exit"
 echo -e "$y-------------------------------------------------------------$wh"
@@ -41,18 +42,21 @@ backup
 restore
 ;;
 6)
-limitspeed
+updatemenu
 ;;
 7)
-ram
+limitspeed
 ;;
 8)
-reboot
+ram
 ;;
 9)
-speedtest
+reboot
 ;;
 10)
+speedtest
+;;
+11)
 info
 ;;
 *)
