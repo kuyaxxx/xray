@@ -377,8 +377,8 @@ END
 
 # // Enable & Start Service
 # Accept port Xray
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
@@ -498,7 +498,7 @@ $uuid
 END
 
 # restart
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2086 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
@@ -512,10 +512,6 @@ systemctl restart trojan-go
 
 cd
 cp /root/domain /etc/xray
-
-[Install]
-WantedBy=multi-user.target
-EOF
 systemctl daemon-reload
 echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
@@ -526,7 +522,9 @@ echo "   - XRAYS Vmess TLS         : 443"  | tee -a log-install.txt
 echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Vless TLS         : 443"  | tee -a log-install.txt
 echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
-echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.t
+echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.txt
+echo "   - TrojanGo                : 2087"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
 echo " Reboot 15 Sec"
 sleep 15
 rm -f setup.sh
