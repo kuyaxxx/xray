@@ -1,0 +1,19 @@
+#!/bin/bash
+# ==========================================
+# download menu
+cd /usr/bin
+rm -rf unem
+rm -rf setting
+rm -rf updatemenu
+rm -rf addvmess
+
+wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/unem"
+wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/setting"
+wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/updatemenu"
+wget -O unem "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/addvmess"
+
+chmod +x unem
+chmod +x setting
+chmod +x updatemenu
+chmod +x addvmess
+cd ~
