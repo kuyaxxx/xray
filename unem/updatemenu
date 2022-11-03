@@ -5,15 +5,18 @@ cd /usr/bin
 rm -rf menu
 rm -rf setting
 rm -rf updatemenu
+rm -rf vmessmenu
 rm -rf addvmess
 
 wget -O menu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/menu"
 wget -O setting "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/setting"
 wget -O updatemenu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/updatemenu"
+wget -O vmessmenu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/vmessmenu"
 wget -O addvmess "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/addvmess"
 
 chmod +x menu
 chmod +x setting
 chmod +x updatemenu
+chmod +x vmessmenu
 chmod +x addvmess
 cd ~
