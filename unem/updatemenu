@@ -4,7 +4,6 @@
 cd /usr/bin
 rm -rf menu
 rm -rf setting
-rm -rf updatemenu
 rm -rf vmessmenu
 rm -rf addvmess
 rm -rf delvmess
