@@ -28,10 +28,10 @@ delvmess
 extvmess
 ;;
 4)
-cekvmess
+checkvmess
 ;;
 5)
-certv2ray
+certvmess
 ;;
 99)
 clear
