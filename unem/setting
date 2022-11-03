@@ -60,7 +60,7 @@ info
 ;;
 99)
 clear
-menu
+setting
 ;;
 *)
 clear
