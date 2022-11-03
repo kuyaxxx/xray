@@ -52,7 +52,7 @@ reboot
 ;;
 99)
 clear
-setting
+menu
 ;;
 *)
 clear
