@@ -13,12 +13,11 @@ echo -e "$yy 1$y.  XRAY VMESS MENU$wh"
 echo -e "$yy 2$y.  XRAY VLESS MENU$wh"
 echo -e "$yy 3$y.  XRAY TROJAN MENU$wh"
 echo -e "$yy 4$y.  TROJAN GO MENU$wh"
-echo -e "$yy 96$y. CEK SEMUA IP PORT$wh"
-echo -e "$yy 97$y. CEK SEMUA SERVICE VPN$wh"
-echo -e "$yy 98$y. Setting (Pengaturan)$wh"
-echo -e "$yy 99$y. Exit (Keluar)$wh"
+echo -e "$yy 97$y. CEK SEMUA IP PORT$wh"
+echo -e "$yy 98$y. CEK SEMUA SERVICE VPN$wh"
+echo -e "$yy 99$y. Setting (Pengaturan)$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options : " menu
+read -p "Select From Options [* - Keluar] : " menu
 case $menu in
 1)
 clear
@@ -36,15 +35,15 @@ trmenu
 clear
 trgomenu
 ;;
-96)
+97)
 clear
 ports
 ;;
-97)
+98)
 clear
 services
 ;;
-98)
+99)
 clear
 setting
 ;;
