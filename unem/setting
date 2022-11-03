@@ -14,10 +14,8 @@ echo -e "$yy 4$y.  Backup Data VPS"
 echo -e "$yy 5$y.  Restore Data VPS"
 echo -e "$yy 6$y.  Update Menu"
 echo -e "$yy 7$y.  Limit Bandwith Speed Server"
-echo -e "$yy 8$y.  Check Usage of VPS Ram"
+echo -e "$yy 8$y.  Speedtest VPS"
 echo -e "$yy 9$y.  Reboot VPS"
-echo -e "$yy 10$y. Speedtest VPS"
-echo -e "$yy 11$y. Displaying System Information"
 echo -e "$y-------------------------------------------------------------$wh"
 echo -e ""
 read -p "Select From Options [99 - Menu; * - Keluar] : " menu
@@ -47,16 +45,10 @@ menu
 limitspeed
 ;;
 8)
-ram
+speedtest
 ;;
 9)
 reboot
-;;
-10)
-speedtest
-;;
-11)
-info
 ;;
 99)
 clear
