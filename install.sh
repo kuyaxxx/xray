@@ -527,5 +527,5 @@ echo "   - TrojanGo                : 2087"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo " Reboot 15 Sec"
 sleep 15
-rm -f setup.sh
+rm -f install.sh
 reboot
