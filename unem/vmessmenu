@@ -25,7 +25,7 @@ addvmess
 delvmess
 ;;
 3)
-renewvmess
+extvmess
 ;;
 4)
 cekvmess
