@@ -20,7 +20,7 @@ echo -e "$yy 10$y. Speedtest VPS"
 echo -e "$yy 11$y. Displaying System Information"
 echo -e "$y-------------------------------------------------------------$wh"
 echo -e ""
-read -p "Select From Options [* - Keluar] : " menu
+read -p "Select From Options [99 - Menu; * - Keluar] : " menu
 echo -e ""
 case $menu in
 1)
@@ -40,6 +40,8 @@ restore
 ;;
 6)
 updatemenu
+clear
+menu
 ;;
 7)
 limitspeed
@@ -56,6 +58,9 @@ speedtest
 11)
 info
 ;;
+99)
+clear
+menu
 *)
 clear
 exit
