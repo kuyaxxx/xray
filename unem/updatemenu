@@ -7,19 +7,25 @@ rm -rf setting
 rm -rf updatemenu
 rm -rf vmessmenu
 rm -rf addvmess
+rm -rf delvmess
 rm -rf extvmess
+rm -rf checkvmess
 
 wget -O menu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/menu"
 wget -O setting "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/setting"
 wget -O updatemenu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/updatemenu"
 wget -O vmessmenu "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/vmessmenu"
 wget -O addvmess "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/addvmess"
+wget -O delvmess "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/delvmess"
 wget -O extvmess "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/extvmess"
+wget -O checkvmess "https://raw.githubusercontent.com/kuyaxxx/xray/main/unem/checkvmess"
 
 chmod +x menu
 chmod +x setting
 chmod +x updatemenu
 chmod +x vmessmenu
 chmod +x addvmess
+chmod +x delvmess
 chmod +x extvmess
+chmod +x checkvmess
 cd
