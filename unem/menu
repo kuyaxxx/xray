@@ -48,12 +48,8 @@ services
 clear
 setting
 ;;
-99)
-clear
-exit
-;;
 *)
 clear
-menu
+exit
 ;;
 esac
