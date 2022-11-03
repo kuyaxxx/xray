@@ -43,7 +43,7 @@ ports
 ;;
 98)
 clear
-services
+serpices
 ;;
 99)
 clear
