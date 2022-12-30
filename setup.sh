@@ -90,19 +90,18 @@ echo -e "\E[44;1;39m          ⇱ INSTALL NGINX ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${ncrvpn}/tools.sh && chmod +x tools.sh && ./tools.sh
-
-#install nginx
-wget https://raw.githubusercontent.com/kuyaxxx/multi-port-tunneling/main/nginx/nginx.sh && chmod +x nginx.sh && ./nginx.sh
-
-#install v2ray
+wget https://${ncrvpn}/nginx/nginx.sh && chmod +x nginx.sh && ./nginx.sh
+#install xray
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL V2RAY ⇲          \E[0m"
+echo -e "\E[44;1;39m          ⇱ INSTALL XRAY ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget https://${ncrvpn}/xray/xray.sh && chmod +x xray.sh && ./xray.sh
+#Instal xray Certificate
+wget -O /usr/bin/certxray "https://${ncrvpn}/main/xray/certxray.sh";chmod +x /usr/bin/certxray;/usr/bin/certxray
+
 #install ssh ovpn
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
