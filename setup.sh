@@ -101,16 +101,14 @@ sleep 2
 wget https://${ncrvpn}/xray/xray.sh && chmod +x xray.sh && ./xray.sh
 #Instal xray Certificate
 wget -O /usr/bin/certxray "https://${ncrvpn}/main/xray/certxray.sh";chmod +x /usr/bin/certxray;/usr/bin/certxray
-
-#install ssh ovpn
+#install ssh
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL SSH-CDN ⇲          \E[0m"
+echo -e "\E[44;1;39m            ⇱ INSTALL SSH ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${akbarvpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://${ncrvpn}/ssh/ssh.sh && chmod +x ssh.sh && screen -S ssh ./ssh.sh
 #install ssr
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
