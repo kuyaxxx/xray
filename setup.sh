@@ -90,60 +90,35 @@ sleep 2
 wget https://${ncrvpn}/ssh/ssh.sh && chmod +x ssh.sh && screen -S ssh ./ssh.sh
 #Instal SSLH
 wget https://${ncrvpn}/sslh/sslh.sh && chmod +x sslh.sh && screen -S sslh ./sslh.sh
+#install Stunnel5
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m            ⇱ INSTALL STUNNEL5 ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${ncrvpn}/stunnel5/stunnel5.sh && chmod +x stunnel5.sh && ./stunnel5.sh
 
-#install ssr
-echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL SSR ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-sleep 2
-wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
-#installwg
-echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL WG ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-sleep 2
-wget https://${akbarvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-#install L2TP
-echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL L2TP ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-sleep 2
-wget https://${akbarvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-# Websocket
+#install websocket
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ INSTALL WEBSOCKET ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
-# Ohp Server
-echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL OHP ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-sleep 2
-wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${ncrvpn}/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 
-rm -f /root/ssh-vpn.sh
-rm -f /root/sstp.sh
-rm -f /root/wg.sh
-rm -f /root/ss.sh
-rm -f /root/ssr.sh
-rm -f /root/ins-xray.sh
-rm -f /root/ipsec.sh
-rm -f /root/set-br.sh
-rm -f /root/edu.sh
-rm -f /root/ohp.sh
+
+rm -f /root/tools.sh
+rm -f /root/nginx.sh
+rm -f /root/xray.sh
+rm -f /root/ssh.sh
+rm -f /root/sslh.sh
+rm -f /root/stunnel5.sh
+rm -f /root/websocket.sh
+#rm -f /root/set-br.sh
+#rm -f /root/edu.sh
+#rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
