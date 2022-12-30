@@ -18,7 +18,9 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-# Link Hosting Kalian Untuk Ssh Vpn
+# Link 
+ncrvpn="raw.githubusercontent.com/kuyaxxx/xray/main"
+
 akbarvpn="raw.githubusercontent.com/kuyaxxx/vaksin/main/ssh"
 # Link Hosting Kalian Untuk Sstp
 akbarvpnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/sstp"
@@ -42,7 +44,7 @@ akbarvpnnnnnnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/ohp"
 # Getting
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ SCRIPT BY N@R.   ⇲          \E[0m"
+echo -e "\E[44;1;39m          ⇱ SCRIPT BY kuyax.   ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 5
@@ -72,7 +74,27 @@ echo -e ""
 sleep 2
 mkdir /var/lib/kuyax;
 echo "IP=" >> /var/lib/kuyax/ipvps.conf
-wget https://${akbarvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://${ncrvpn}/domain.sh && chmod +x domain.sh && ./domain.sh
+#install Tools
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL TOOLS ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${ncrvpn}/tools.sh && chmod +x tools.sh && ./tools.sh
+#install nginx
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL NGINX ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${ncrvpn}/tools.sh && chmod +x tools.sh && ./tools.sh
+
+#install nginx
+wget https://raw.githubusercontent.com/kuyaxxx/multi-port-tunneling/main/nginx/nginx.sh && chmod +x nginx.sh && ./nginx.sh
+
 #install v2ray
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
