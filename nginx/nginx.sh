@@ -5,7 +5,9 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 curl https://raw.githubusercontent.com/kuyaxxx/multi-port-tunneling/main/nginx/nginx.conf > /etc/nginx/nginx.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
-wget -O /home/ncr/public_html/index.html "https://raw.githubusercontent.com/kuyaxxx/multi-port-tunneling/main/nginx/index.html"
+useradd -m kuyax;
+mkdir -p /home/kuyax/public_html
+wget -O /home/kuyax/public_html/index.html "https://raw.githubusercontent.com/kuyaxxx/xray/main/nginx/index.html"
 /etc/init.d/nginx restart
 ##
 ## Hapus
