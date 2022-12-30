@@ -46,18 +46,18 @@ mv xray /usr/local/bin/xray
 chmod +x /usr/local/bin/xray
 
 #! /bin/bash
-USER_NAME=ncr
-cat /etc/passwd | grep ${USER_NAME} >/dev/null 2>&1
-if [ $? -eq 0 ] ; then
-    echo "User Exists"
-else
-    echo "Add User ncr"
-    useradd -m ncr;
-fi
-mkdir -p /home/ncr/public_html
-echo "<?php phpinfo() ?>" > /home/ncr/public_html/info.php
-chown -R www-data:www-data /home/ncr/public_html
-chmod -R g+rw /home/ncr/public_html
+USER_NAME=kuyax
+#cat /etc/passwd | grep ${USER_NAME} >/dev/null 2>&1
+#if [ $? -eq 0 ] ; then
+#    echo "User Exists"
+#else
+#    echo "Add User ncr"
+#    useradd -m ncr;
+#fi
+#mkdir -p /home/ncr/public_html
+echo "<?php phpinfo() ?>" > /home/${USER_NAME}/public_html/info.php
+chown -R www-data:www-data /home/${USER_NAME}/public_html
+chmod -R g+rw /home/${USER_NAME}/public_html
 
 ## hapus
 #rm -rf /etc/nginx/conf.d/alone.conf
