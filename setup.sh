@@ -20,27 +20,6 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Link 
 ncrvpn="raw.githubusercontent.com/kuyaxxx/xray/main"
-
-akbarvpn="raw.githubusercontent.com/kuyaxxx/vaksin/main/ssh"
-# Link Hosting Kalian Untuk Sstp
-akbarvpnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/sstp"
-# Link Hosting Kalian Untuk Ssr
-akbarvpnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/ssr"
-# Link Hosting Kalian Untuk Shadowsocks
-akbarvpnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/shadowsocks"
-# Link Hosting Kalian Untuk Wireguard
-akbarvpnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/wireguard"
-# Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/xray"
-# Link Hosting Kalian Untuk Ipsec
-akbarvpnnnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/ipsec"
-# Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/backup"
-# Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/websocket"
-# Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/kuyaxxx/vaksin/main/ohp"
-
 # Getting
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -109,6 +88,9 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 wget https://${ncrvpn}/ssh/ssh.sh && chmod +x ssh.sh && screen -S ssh ./ssh.sh
+#Instal SSLH
+wget https://${ncrvpn}/sslh/sslh.sh && chmod +x sslh.sh && screen -S sslh ./sslh.sh
+
 #install ssr
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
