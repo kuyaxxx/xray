@@ -51,6 +51,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 clear
+#
 # XRAY
 # CEK XRAY
 xray_service=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -65,7 +66,7 @@ fi
 #
 # SUPER XRAY
 # CEK SUPER XRAY
-super_xray_service=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")>
+super_xray_service=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 # STATUS SERVICE SSLH / SSH
 if [[ $super_xray_service == "running" ]]; then 
    status_super_xray=" ${GREEN}Running ${NC}( No Error )${NC}"
@@ -76,8 +77,7 @@ fi
 
 # NGINX
 # CEK NGINX
-nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" >
+nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $2}' | cut -d "(" -f2 | cut -d ")" -f1)
 # STATUS SERVICE STUNNEL
 if [[ $nginx_service == "running" ]]; then 
    status_nginx=" ${GREEN}Running ${NC}( No Error )"
@@ -115,7 +115,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m          ⇱ SCRIPT KUYAX Information ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️  Name Script : KUYAX"
-echo -e "❇️  Link Script : https://github.com/kuyaxxx/XRAY"
+echo -e "❇️  Link Script : https://github.com/kuyaxxx/xray"
 echo -e "❇️  Version     : Latest Version"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
@@ -123,26 +123,34 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "❇️  XRAY Multi Port         :$status_xray"
 echo -e "❇️  Super XRAY              :$status_super_xray"
 echo -e "❇️  NGINX                   :$status_nginx"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ MENU ⇲           \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️  1. Buat Semua Akun XRAY"
-echo -e "❇️  2. Hapus Akun XRAY"
-echo -e "❇️  3. Perbarui Certificate"
-echo -e "❇️  Enter to Exit"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ MENU ⇲           \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-read -p "     Select From Options [1-5] :  " menu
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                   ⇱ MENU ⇲                     \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "❇️  1. Create Account"
+echo -e "❇️  2. Delete Account"
+echo -e "❇️  3. Extending Account"
+echo -e "❇️  4. Check User Login"
+echo -e "❇️  5. Renew Certificate"
+echo -e "❇️  x. Exit/Keluar"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                   ⇱ MENU ⇲                     \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+read -p "     Select From Options [1-5 or x] :  " menu
 case $menu in 
 1)
-add-xray
+menu-ssh
 ;;
 2)
-del-xray
+menu-xray
 ;;
 3)
-certxray
+menu-cek
+;;
+4)
+menu-update
+;;
+5)
+menu-setting
 ;;
 *)
 exit
