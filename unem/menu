@@ -125,12 +125,12 @@ echo -e "❇️  NGINX                   :$status_nginx"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ MENU ⇲           \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e        "❇️  1. Buat Semua Akun XRAY"
-echo -e        "❇️  2. Hapus Akun XRAY"
-echo -e        "❇️  3. Perpanjang Akun XRAY"
-echo -e        "❇️  4. Check Akun XRAY"
-echo -e        "❇️  5. Perbarui Certificate"
-echo -e        "❇️  Enter to Exit"
+echo -e "❇️  1. Buat Semua Akun XRAY"
+echo -e "❇️  2. Hapus Akun XRAY"
+echo -e "❇️  3. Perpanjang Akun XRAY"
+echo -e "❇️  4. Check Akun XRAY"
+echo -e "❇️  5. Perbarui Certificate"
+echo -e "❇️  Enter to Exit"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ MENU ⇲           \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -146,7 +146,7 @@ del-xray
 ext-xray
 ;;
 4)
-check-xray
+certxray
 ;;
 5)
 renew-cert
