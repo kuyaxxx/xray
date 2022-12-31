@@ -51,71 +51,6 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 clear
-#
-# OPENSSH
-# CEK SSH OPENSSH
-ssh_service=$(/etc/init.d/ssh status | grep Active | awk 'NR==1 {print $3}' | cut -d "(" -f2 | cut -d ")>
-# STATUS SERVICE  SSH 
-if [[ $ssh_service == "running" ]]; then 
-   status_ssh=" ${GREEN}Running ${NC}( No Error )"
-else
-   status_ssh="${RED}  Not Running ${NC}  ( Error )"
-fi
-# OPENSSH
-
-# DROPBEAR
-# CEK SSH DROPBEAR
-dropbear_service=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut ->
-# STATUS SERVICE DROPBEAR
-if [[ $dropbear_service == "running" ]]; then
-   status_beruangjatuh=" ${GREEN}Running${NC} ( No Error )${NC}"
-else
-   status_beruangjatuh="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-
-# SSLH
-# CEK SSLH
-sslh_service=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-# STATUS SERVICE SSLH / SSH
-if [[ $sslh_service == "running" ]]; then 
-   status_sslh=" ${GREEN}Running ${NC}( No Error )${NC}"
-else
-   status_sslh="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-# SSLH
-
-# STUNNEL5
-# CEK STUNNEL5
-stunnel_service=$(/etc/init.d/stunnel5 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d>
-# STATUS SERVICE STUNNEL
-if [[ $stunnel_service == "running" ]]; then 
-   status_stunnel=" ${GREEN}Running ${NC}( No Error )"
-else
-   status_stunnel="${RED}  Not Running ${NC}  ( Error )}"
-fi
-# STUNNEL5
-
-# SSH WEBSOCKET TLS
-# CEK 
-websocket_service_tls=$(systemctl status ws-tls | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut >
-# STATUS SERVICE SSH WEBSOCKET TLS
-if [[ $websocket_service_tls == "running" ]]; then 
-   status_websocket_tls=" ${GREEN}Running ${NC}( No Error )${NC}"
-else
-   status_websocket_tls="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-# SSH WEBSOCKET TLS
-
-# SSH WEBSOCKET HTTP
-websocket_service_http=$(systemctl status ws-nontls | grep Active | awk '{print $3}' | cut -d "(" -f2 | >
-# STATUS SERVICE SSH WEBSOCKET HTTP
-if [[ $websocket_service_http == "running" ]]; then 
-   status_websocket_http=" ${GREEN}Running ${NC}( No Error )${NC}"
-else
-   status_websocket_http="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-# SSH WEBSOCKET HTTP
-
 # XRAY
 # CEK XRAY
 xray_service=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -179,32 +114,26 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m          ⇱ SCRIPT KUYAX Information ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️  Name Script : KUYAX"
-echo -e "❇️  Link Script : https://github.com/kuyaxxx/MULTI-PORT-TUNNELING"
+echo -e "❇️  Link Script : https://github.com/kuyaxxx/XRAY"
 echo -e "❇️  Version     : Latest Version"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️  SSH OpenSSH             :$status_ssh"
-echo -e "❇️  SSH Dropbear            :$status_beruangjatuh"
-echo -e "❇️  SSLH                    :$status_sslh"
-echo -e "❇️  SSH Stunnel5            :$status_stunnel"
-echo -e "❇️  SSH Websocket TLS       :$status_websocket_tls"
-echo -e "❇️  SSH Websocket HTTP      :$status_websocket_http"
 echo -e "❇️  XRAY Multi Port         :$status_xray"
 echo -e "❇️  Super XRAY              :$status_super_xray"
 echo -e "❇️  NGINX                   :$status_nginx"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                   ⇱ MENU ⇲                     \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️  1. Buat Semua Akun XRAY"
-echo -e "❇️  2. Hapus Akun XRAY"
-echo -e "❇️  3. Perpanjang Akun XRAY"
-echo -e "❇️  4. Check Akun XRAY"
-echo -e "❇️  5. Perbarui Certificate"
-echo -e "❇️  Enter to Exit"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                   ⇱ MENU ⇲                     \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ MENU ⇲           \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e        "❇️  1. Buat Semua Akun XRAY"
+echo -e        "❇️  2. Hapus Akun XRAY"
+echo -e        "❇️  3. Perpanjang Akun XRAY"
+echo -e        "❇️  4. Check Akun XRAY"
+echo -e        "❇️  5. Perbarui Certificate"
+echo -e        "❇️  Enter to Exit"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ MENU ⇲           \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "     Select From Options [1-5] :  " menu
 case $menu in 
 1)
