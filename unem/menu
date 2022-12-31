@@ -76,7 +76,8 @@ fi
 
 # NGINX
 # CEK NGINX
-nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" >
+nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" >
 # STATUS SERVICE STUNNEL
 if [[ $nginx_service == "running" ]]; then 
    status_nginx=" ${GREEN}Running ${NC}( No Error )"
