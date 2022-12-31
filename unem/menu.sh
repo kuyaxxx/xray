@@ -2,8 +2,8 @@
 # ==========================================
 ncrvpn="raw.githubusercontent.com/kuyaxxx/xray/main"
 wget -O /usr/bin/menu "https://${ncrvpn}/unem/menu"
-wget -O /usr/bin/add-xray "https://${ncrvpn}/unem/menu-xray/add-xray"
-wget -O /usr/bin/del-xray "https://${ncrvpn}/unem/menu-xray/del-xray"
+wget -O /usr/bin/add-xray "https://${ncrvpn}/unem/add-xray"
+wget -O /usr/bin/del-xray "https://${ncrvpn}/unem/del-xray"
 
 #
 chmod +x /usr/bin/menu
