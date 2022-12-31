@@ -79,7 +79,7 @@ echo -e ""
 sleep 2
 wget https://${ncrvpn}/xray/xray.sh && chmod +x xray.sh && ./xray.sh
 #Instal xray Certificate
-wget -O /usr/bin/certxray "https://${ncrvpn}/main/xray/certxray.sh";chmod +x /usr/bin/certxray;/usr/bin/certxray
+wget -O /usr/bin/certxray "https://${ncrvpn}/xray/certxray.sh";chmod +x /usr/bin/certxray;/usr/bin/certxray
 #install ssh
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -98,7 +98,6 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 wget https://${ncrvpn}/stunnel5/stunnel5.sh && chmod +x stunnel5.sh && ./stunnel5.sh
-
 #install websocket
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -107,7 +106,14 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 wget https://${ncrvpn}/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
-
+#install menu
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m            ⇱ INSTALL MENU ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${ncrvpn}/unem/menu.sh && chmod +x menu.sh && ./menu.sh
 
 rm -f /root/tools.sh
 rm -f /root/nginx.sh
