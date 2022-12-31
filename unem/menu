@@ -82,7 +82,7 @@ nginx_service=$(/etc/init.d/nginx status | grep Active | awk '{print $2}' | cut 
 if [[ $nginx_service == "running" ]]; then 
    status_nginx=" ${GREEN}Running ${NC}( No Error )"
 else
-   status_nginx=" ${RED}Not Running ${NC}( Error )}"
+   status_nginx=" ${RED}Not Running${NC}(Error)"
 fi
 # NGINX
 #
