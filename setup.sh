@@ -23,7 +23,7 @@ ncrvpn="raw.githubusercontent.com/kuyaxxx/xray/main"
 # Getting
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ SCRIPT BY kuyax.   ⇲          \E[0m"
+echo -e "\E[44;1;39m          ⇱ SCRIPT BY Kuyax.   ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 5
