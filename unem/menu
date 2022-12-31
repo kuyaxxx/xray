@@ -129,11 +129,11 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "❇️  1. Create Account"
 echo -e "❇️  2. Delete Account"
 echo -e "❇️  3. Renew Certificate"
-echo -e "❇️  x. Exit/Keluar"
+echo -e "❇️  Enter to Exit"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                   ⇱ MENU ⇲                     \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-read -p "     Select From Options [1-5 or x] :  " menu
+read -p "     Select From Options [1-3 or x] :  " menu
 case $menu in 
 1)
 add-xray
