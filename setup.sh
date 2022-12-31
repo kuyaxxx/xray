@@ -122,6 +122,7 @@ rm -f /root/ssh.sh
 rm -f /root/sslh.sh
 rm -f /root/stunnel5.sh
 rm -f /root/websocket.sh
+rm -f /root/menu.sh
 
 sleep 2
 echo " Reboot 15 Sec"
